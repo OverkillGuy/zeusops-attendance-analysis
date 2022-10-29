@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "zeusops_attendance_analysis"
-version = "0.1.0"
+version = "0.2.0"
 description = "Data analysis on the Zeusops ArmA unit attendance sheet"
 authors = ["Jb Doyon <jb@jiby.tech>"]
 readme = "README.md"
