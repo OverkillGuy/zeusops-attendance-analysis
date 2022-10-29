@@ -52,7 +52,7 @@ def process_operations(headers, second_line, users):
         dates[op_date] = {"recorded_attendees": op_attendees, "attendees": {}}
         for user_name, data in users.items():
             user_at_op = data[op_date_str]
-            if user_at_op not in ["", "ABSENT", "ON LEAVE"]:  # FIXME: Any other weird?
+            if user_at_op not in ["", "ABSENT", "ON LEAVE", "SIGNED OFF"]:  # FIXME: Any other weird?
                 dates[op_date]["attendees"][user_name] = user_at_op
         dates[op_date]["computed_attendees"] = str(len(dates[op_date]["attendees"]))
         if dates[op_date]["computed_attendees"] != dates[op_date]["recorded_attendees"]:
