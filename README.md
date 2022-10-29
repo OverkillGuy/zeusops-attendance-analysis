@@ -7,15 +7,29 @@ Requires Python 3.10
 
 ## Usage
 
-Depends on what the code in there does.
+Generate the database from attendance CSV, then visualize it as a local website
 
 ### Run the command
 
-Install the module first:
+Install the dependencies first:
 
     make install
     # or
 	poetry install
+
+Download the Attendance sheet as CSV from Google Docs, save it as
+`attendance.csv` then run it through the scripts provided:
+
+    make serve
+    # aka
+    zeusops-attendance-analysis attendance.csv attendance.db
+
+This generates an sqlite database of our attendance sheet, which can be
+visualized via: 
+
+    poetry run datasette -i attendance
+    # aka
+    make serve
 
 Then inside the virtual environment, launch the command:
 

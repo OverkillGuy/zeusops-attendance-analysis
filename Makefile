@@ -9,7 +9,7 @@ install:
 	poetry install
 
 attendance.db:
-	poetry run zeusops-attendance-analysis "Attendance, Missions & Statistics - Attendance.csv" attendance.db
+	poetry run zeusops-attendance-analysis attendance.csv attendance.db
 
 .PHONY: serve
 serve: attendance.db
