@@ -20,13 +20,14 @@ Install the module first:
 Then inside the virtual environment, launch the command:
 
     # Run single command inside virtualenv
-    poetry run zeusops-attendance-analysis
+    poetry run zeusops-attendance-analysis attendance.csv attendance.db
 
     # or
     # Load the virtualenv first
     poetry shell
     # Then launch the command, staying in virtualenv
-    zeusops-attendance-analysis
+    zeusops-attendance-analysis attendance.csv attendance.db
+    
 
 ## Development
 

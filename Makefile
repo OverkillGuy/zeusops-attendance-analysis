@@ -8,6 +8,13 @@ all: install lint test docs build
 install:
 	poetry install
 
+attendance.db:
+	poetry run zeusops-attendance-analysis "Attendance, Missions & Statistics - Attendance.csv" attendance.db
+
+.PHONY: serve
+serve: attendance.db
+	poetry run datasette -i attendance.db
+
 .PHONY: lint
 lint:  # Use all linters on all files (not just staged for commit)
 	pre-commit run --all --all-files
