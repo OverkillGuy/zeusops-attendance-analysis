@@ -108,3 +108,13 @@ documentation and serve it:
 ### Templated
 
 This repo is templated, using commit hash: `f596a46e4abf80e84e659353d5daaf54c5d01d78`
+
+
+## TODO list
+
+This code is obviously not done. The following are improvements I'll be
+considering soon:
+- Merging data from `#attendance` channel (for reducing error rates)
+- Adding a table for roles to separate the junk-y ones ("PRESENT") from the T1s etc
+- Enhance operations data by injecting `#events-briefing` data
+- Add the info from the `#events` bot to the operations
